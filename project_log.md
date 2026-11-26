@@ -5,20 +5,20 @@
 **Objective 1:** Acquire the avionics hardware components
   
 **Actions Taken 1:**
-  * Obtained necessary components for project:  
-        * Raspberry Pi Pico with pre-soldered headers, 
-        * DFRobot Fermion MPU-6050 `SEN0142`, 
-        * Adafruit BMP388 `ADA3966`, 
-        * 3.3 V MicroSD breakout `106696`, 
-        * SPDT ON-ON latching toggle switch, 
-        * 50 cm Micro-USB data/power cable,
-        * X GB MicroSD card,
-        * Male-to-Male breadboard wires,
-        * Female-to-Male breadboard wires,
-        * Breadboard,
-        * 10K Ohm and 220 Ohm resistors,
-        * Micro Servo SG90,
-        * and LEDs (various colours).
+Obtained necessary components for project:  
+  * Raspberry Pi Pico with pre-soldered headers, \n
+  * DFRobot Fermion MPU-6050 `SEN0142`, \n
+  * Adafruit BMP388 `ADA3966`, \n
+  * 3.3 V MicroSD breakout `106696`, 
+  * SPDT ON-ON latching toggle switch, 
+  * 50 cm Micro-USB data/power cable,
+  * X GB MicroSD card,
+  * Male-to-Male breadboard wires,
+  * Female-to-Male breadboard wires,
+  * Breadboard,
+  * 10K Ohm and 220 Ohm resistors,
+  * Micro Servo SG90,
+  * and LEDs (various colours).
 
 **Objective 2:** Configure the VS Code + PlatformIO C++ environment for the RP2040, and initialize version control on GitHub for `avionics_flight_computer`.
   
