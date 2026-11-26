@@ -2,11 +2,17 @@
 **Project Log**
 
 ## Entry - 2026-11-16 |Hardware Order, VS Code Toolchain & GitHub Setup
-**Objectives:** 1. Acquire the avionics hardware components
-2. Configure the VS Code + PlatformIO C++ environment for the RP2040, and initialize version control on GitHub for `avionics_flight_computer`.
+**Objectives:**
+1. Configure the VS Code + PlatformIO C++ environment for the RP2040, and initialize version control on GitHub for 
+`avionics_flight_computer`.
+2. Acquire the avionics hardware components
   
 **Actions Taken:**
- Obtained necessary components for project:  
+* Created the `avionics_flight_computer` PlatformIO project (`rpipico`, Arduino framework) in VS Code on macOS, configured `platformio.ini` with the Earle Philhower core (`maxgerhardt/platform-raspberrypi`) and Adafruit MPU6050/BMP3XX libraries, and set `Wire.setSDA(4)` and `Wire.setSCL(5)` in `src/main.cpp`.
+  
+* Created the public `avionics_flight_computer` repository on GitHub without initializing a README, `.gitignore`, or license, and initialized Git, committed the baseline files, added the remote, and pushed to `main` from the VS Code terminal on macOS.
+  
+* Obtained necessary components for project: 
   * Raspberry Pi Pico with pre-soldered headers,
   * DFRobot Fermion MPU-6050 `SEN0142`, 
   * Adafruit BMP388 `ADA3966`, 
@@ -20,10 +26,6 @@
   * 10K Ohm and 220 Ohm resistors,
   * Micro Servo SG90,
   * and LEDs (various colours).
-
-* Created the `avionics_flight_computer` PlatformIO project (`rpipico`, Arduino framework) in VS Code on macOS, configured `platformio.ini` with the Earle Philhower core (`maxgerhardt/platform-raspberrypi`) and Adafruit MPU6050/BMP3XX libraries, and set `Wire.setSDA(4)` and `Wire.setSCL(5)` in `src/main.cpp`.
-  
-* Created the public `avionics_flight_computer` repository on GitHub without initializing a README, `.gitignore`, or license, and initialized Git, committed the baseline files, added the remote, and pushed to `main` from the VS Code terminal on macOS.
 
 **Verification:** Confirmed clean PlatformIO compilation (`[SUCCESS]`) and verified the baseline repository files (`platformio.ini`, `src/main.cpp`, `.gitignore`) were pushed to the `main` branch on GitHub.
 
