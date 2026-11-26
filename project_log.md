@@ -6,7 +6,7 @@
 2. Configure the VS Code + PlatformIO C++ environment for the RP2040, and initialize version control on GitHub for `avionics_flight_computer`.
   
 **Actions Taken:**
-Obtained necessary components for project:  
+ Obtained necessary components for project:  
   * Raspberry Pi Pico with pre-soldered headers,
   * DFRobot Fermion MPU-6050 `SEN0142`, 
   * Adafruit BMP388 `ADA3966`, 
