@@ -3,6 +3,7 @@
 
 ## Entry - 2026-11-16 |Hardware Order, VS Code Toolchain & GitHub Setup
 * **Objective 1:** Acquire the avionics hardware components
+ 
  **Actions Taken 1:**
   * Obtained necessary components for project:  
         * Raspberry Pi Pico with pre-soldered headers, 
