@@ -48,11 +48,7 @@ void scanI2CBus() {
       Serial.println(address, HEX);
     }
   }
-  // Handle the case where no peripherals acknowledged on the bus
-    Serial.println("  No I2C devices responded.");
-  //if devices found, print how many
-  //ACK device is a I2C peripheral that responds with an Acknowledgement signal when addressed by the I2C controller
-  if (devicesFound == 0) {
+if (devicesFound == 0) {
     Serial.println("  No I2C devices responded.");
   } else {
     Serial.print("Scan complete. Total ACK devices: ");

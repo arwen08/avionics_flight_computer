@@ -45,5 +45,6 @@
 
 **Issues & Next Steps:** The solder had a really hard time sticking to the wire and the switch lugs so it took a few attempts. Next time, wire the I2C0 bus (GP4 SDA, GP5 SCL on 3.3 V) and run the I2C scanner to confirm addresses 0x68 and 0x77.
 
-## New Entry
+## Entry — 2026-11-27 | 
+
 
