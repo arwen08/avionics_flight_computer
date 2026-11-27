@@ -45,6 +45,16 @@
 
 **Issues & Next Steps:** The solder had a really hard time sticking to the wire and the switch lugs so it took a few attempts. Next time, wire the I2C0 bus (GP4 SDA, GP5 SCL on 3.3 V) and run the I2C scanner to confirm addresses 0x68 and 0x77.
 
-## Entry — 2026-11-27 | 
+## Entry — 2026-11-27 | I2C0 Bus Scan & Milestone 1 Verification
+- **Objective:** Wire the MPU-6050 and BMP388 to the I2C0 bus on the 3.3 V rail of the breadboard, flash the I2C scanner in `src/main.cpp`, and verify hardware acknowledgement (`[ACK]`) on both sensor addresses.
 
+- **Actions Taken:**
+  - Wired the Raspberry Pi Pico, DFRobot Fermion MPU-6050 (`SEN0142`), and Adafruit BMP388 (`ADA3966`) on the breadboard using `GP4` (SDA) and `GP5` (SCL) on the 3.3 V rail.
+  - Implemented and uploaded the 400 kHz I2C0 bus scanner in `src/main.cpp` using `Wire.setSDA(4)`, `Wire.setSCL(5)`, `Wire.begin()`, and `Wire.setClock(400000)` with a bounded startup wait for USB `Serial` at `115200` baud, sweeping 7-bit addresses `0x01`–`0x7E`, and removed a stray unguarded print line before the `devicesFound == 0` check.
+
+- **Verification:** Confirmed across repeated scans in the PlatformIO Serial Monitor (`/dev/cu.usbmodem1101` at `115200` baud) that both `0x68` (MPU-6050) and `0x77` (BMP388) return `[ACK]` (`Total ACK devices: 2`) at 400 kHz with no `[ERR]` bus faults[cite: 2, 3].
+
+- **Issues & Next Steps:** No hardware bus faults observed. Next: commit the updated `src/main.cpp` and scan output to `avionics_flight_computer`, then start Milestone 2 (initializing `Adafruit_MPU6050` and `Adafruit_BMP3XX`, measuring the resting gravity vector and gyroscope zero-rate bias at startup, and streaming raw sensor data over serial)[cite: 2, 3].
+
+## New Entry 
 
